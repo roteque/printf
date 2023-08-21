@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 	break;
 	if (*format == '%')
 	{
-	write (1, format, 1);
+	write(1, format, 1);
 	char_count++;
 	}
 	else if (*format == 'c')
@@ -42,7 +42,8 @@ int _printf(const char *format, ...)
 	{
 	char *str = va_arg(list, char*);
 	int str_lent = strlen(str);
-	write (1, str, str_lent);
+
+	write(1, str, str_lent);
 	char_count = char_count + str_lent;
 	}
 }
