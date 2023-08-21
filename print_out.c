@@ -42,8 +42,7 @@ int _printf(const char *format, ...)
 	{char *str = va_arg(list, char*);
 	int str_count = 0;
 
-	while (str[str_count] != '\0')
-	str_count++;
+	while (str[str_count] != '\0'&& str_count++ )
 	write(1, str, str_count);
 	char_count = char_count + str_count;
 	}
