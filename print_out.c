@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 	break;
 	if (*format == '%')
 	{
-	write(1, format, 1);
+	write(2, format, 1);
 	char_count++;
 	}
 	else if (*format == 'c')
@@ -39,12 +39,13 @@ int _printf(const char *format, ...)
 	char_count++;
 	}
 	else if (*format == 's')
-	{
-	char *str = va_arg(list, char*);
-	int str_lent = strlen(str);
+	{char *str = va_arg(list, char*);
+	int str_count = 0;
 
-	write(1, str, str_lent);
-	char_count = char_count + str_lent;
+	while (str[str_count] != '\0')
+	str_count++;
+	write(1, str, str_count);
+	char_count = char_count + str_count;
 	}
 }
 	format++;
