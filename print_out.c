@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 	break;
 	if (*format == '%')
 	{
-	write(2, format, 1);
+	write(1, format, 1);
 	char_count++;
 	}
 	else if (*format == 'c')
