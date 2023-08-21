@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 	int str_count = 0;
 
 	while (str[str_count] != '\0')
-	{str_count++
+	{str_count++;
 	}write(1, str, str_count);
 	char_count = char_count + str_count;
 	}
