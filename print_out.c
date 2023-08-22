@@ -19,21 +19,14 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	while (*format)
 	{
-		if (*format != '%')
-	{write(1, format, 1);
-		char_count++;
-	}	else
-	{	format++;
-	if (*format == '\0')
-	break;
-	if (*format == '%')
+	if (*format != '%')
 	{	write(1, format, 1);
 	char_count++;
+	format++;
 	}
 	else
-	{format++;
-	if (*format == '\0')
-	break;
+	{
+	format++;
 	if (*format == 'c')
 	{	char letter = va_arg(list, int);
 	write(1, &letter, 1);
@@ -44,12 +37,18 @@ int _printf(const char *format, ...)
 	int str_count = 0;
 
 	while (str[str_count] != '\0')
-	{	str_count++;
+	{
+	str_count++;
 	}	write(1, str, str_count);
 	char_count += str_count;
 	}
-	}	format++;
+	else if (*format == '%')
+	{	write(1, "%", 1);
+	char_count++;
 	}
-	}	va_end(list);
+	format++;
+	}
+	}
+	va_end(list);
 	return (char_count);
-}
+	}
