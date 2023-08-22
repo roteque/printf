@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _printf(const char *format, ...)
+int _printf_id(const char *format, ...)
 {	
 	int char_count = 0;
 	va_list list;
