@@ -4,9 +4,11 @@
 
 /**
  * main - Entry point
- *
+ * @format: identifier to look for.
  * Return: Always 0
  */
+int _printf(const char *format, ...);
+
 int main(void)
 {
 	printf("Character:[%c]\n", 'H');

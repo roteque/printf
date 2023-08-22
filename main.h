@@ -8,6 +8,7 @@
 #include<limits.h>
 
 int _printf(const char *format, ...);
+int _printf_id(const char *format, ...);
 
 
 #endif
