@@ -22,9 +22,9 @@ int main(void)
 	printf("String:[%s]\n", "I am a string !");
 	_printf("Percent:[%%]\n");
 	printf("Percent:[%%]\n");
-	_printf("Len:[%d]\n", len);
+	_printf_id("Len:[%d]\n", len);
         printf("Len:[%d]\n", len2);
-	_printf("Length:[%d, %i]\n", len, len);
+	_printf_id("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
 
 	return (0);
