@@ -5,8 +5,7 @@
  * @format: identifier to look for.
  * @c char specifier
  * @s string specifiers
- * @% modulus
- *
+ * @% modulus*
  * Return: the length of the string.
  **/
 
